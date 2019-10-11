@@ -10,7 +10,6 @@
 
 GPU_TYPE="nvidia-tesla-k80" # see: https://cloud.google.com/compute/docs/gpus/
 DOCKER_IMAGE="quay.io/broadinstitute/beast2-beagle-cuda"
-DOCKER_IMAGE="tomkinsc/beast2-beagle-cuda" # temporary until docker image is on quay.io
 
 # get absolute path for file
 function absolute_path() {
