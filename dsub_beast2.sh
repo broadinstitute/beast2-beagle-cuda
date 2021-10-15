@@ -43,7 +43,7 @@ function print_usage(){
   echo "        For example:"
   echo "          BEAST_VERSION='2.5.0' $(basename $0) gs://path/to/in.xml gcp-project-name num_gpus [beagle_order]"
   echo "        For available versions of BEAST2, see the tags on Quay.io:"
-  echo "          https://quay.io/repository/broadinstitute/beast-beagle-cuda?tab=tags"
+  echo "          https://quay.io/repository/broadinstitute/beast2-beagle-cuda?tab=tags"
   echo "        If BEAST_VERSION is not specified the 'latest' tag will be used."
   echo ""
   echo "        The GPU type can be set via the BEAST_GPU_MODEL environment variable."
