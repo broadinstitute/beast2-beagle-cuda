@@ -23,7 +23,7 @@ Usage:
         For example:
           BEAST_VERSION='2.5.0' dsub_beast.sh gs://path/to/in.xml gcp-project-name num_gpus [beagle_order]
         For available versions of BEAST2, see the tags on Quay.io:
-          https://quay.io/repository/broadinstitute/beast-beagle-cuda?tab=tags
+          https://quay.io/repository/broadinstitute/beast2-beagle-cuda?tab=tags
         If BEAST_VERSION is not specified the 'latest' tag will be used.
 
         The GPU type can be set via the BEAST_GPU_MODEL environment variable.
