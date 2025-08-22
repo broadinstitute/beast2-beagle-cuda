@@ -12,5 +12,6 @@ mv beast/bin/* /usr/local/bin
 mv beast/lib/* /usr/local/lib
 
 beast -beagle_info
-packagemanager -add BADTRIP
-packagemanager -add PoMo
+packagemanager -useAppDir -add BADTRIP
+packagemanager -useAppDir -add PoMo
+packagemanager -useAppDir -list
