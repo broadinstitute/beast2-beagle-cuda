@@ -18,8 +18,19 @@ fi
 
 pwd 
 cd $OUT_DIR
-beast -beagle_info > "${OUTPUT_PREFIX}.out"
+beast -beagle_info #> "${OUTPUT_PREFIX}.out"
+packagemanager -del BADTRIP
+packagemanager -del PoMo
+packagemanager -useAppDir -add BADTRIP
+packagemanager -useAppDir -add PoMo
+packagemanager -updatenow
+packagemanager -useAppDir -list
+
+export BEAGLE_LIB=/usr/local/share/beast/2.5/BADTRIP/lib:/usr/local/share/beast/2.5/PoMo/lib
+
+#echo "PATH:${PATH}"
+#echo "which beast: $(which beast)"
 pwd 
 #beast -beagle_GPU -beagle_cuda -beagle_double -beagle_scaling always -beagle_order ${BEAGLE_ORDER} ${BEAST_EXTRA_ARGS} ${INPUT_FILE} >> "${OUTPUT_PREFIX}.out"
-beast -beagle_GPU -beagle_double -beagle_scaling always -beagle_order ${BEAGLE_ORDER} ${BEAST_EXTRA_ARGS} ${INPUT_FILE} >> "${OUTPUT_PREFIX}.out"
+beast -loglevel debug -beagle_GPU -beagle_double -beagle_scaling always -beagle_order ${BEAGLE_ORDER} ${BEAST_EXTRA_ARGS} ${INPUT_FILE} #>> "${OUTPUT_PREFIX}.out"
 ls 
